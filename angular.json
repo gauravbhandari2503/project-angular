@@ -30,6 +30,10 @@
               "src/assets"
             ],
             "styles": [
+              {
+                "input": "src/bootstrap.scss",
+                "bundleName": "bootstrap"
+              },
               "src/styles.scss"
             ],
             "scripts": []
