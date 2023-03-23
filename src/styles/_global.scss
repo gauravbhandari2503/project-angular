@@ -1,0 +1,123 @@
+@import './utils';
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+a {
+  transition: all 0.25s linear;
+}
+
+.bg-light-blue {
+  background-color: $bg-color;
+}
+
+.bg-grey {
+  background-color: $primary-color;
+}
+
+.sidebar-wrapper:not(.sidebar-collapse)~* {
+    --sidebar-occupy-start: 252px !important;
+}
+
+.form-wrapper {
+  @extend .flex-center;
+  @extend .flex-col;
+  @extend .margin-auto;
+  max-width: 924px;
+  padding: 40px 15px;
+}
+
+.form-control {
+  min-height: 53px;
+  border-radius: 0;
+  border-color: #CBCBCB;
+}
+
+.cdk-overlay-container {
+  z-index: 9999;
+}
+
+.sm-form-wrapper {
+    max-width: 546px;
+}
+
+.btn {
+  padding: 14px 24px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  text-align: center;
+
+  &.no-style {
+    background: none;
+    font-size: 17px;
+    padding: 0;
+    border: none;
+    appearance: none;
+
+    &.blue {
+      color: $accent-color;
+
+      &:hover {
+        color: $accent-color;
+      }
+    }
+
+    &.black {
+      color: $black;
+
+      &:hover {
+        color: $black;
+      }
+    }
+
+    &:hover {
+      background: none;
+      color: inherit;
+    }
+
+    &:is(:active, :focus) {
+      border: none;
+    }
+  }
+}
+
+.btn-secondary {
+  background-color: $primary-color;
+  min-width: 190px;
+}
+
+.btn-outline-secondary {
+  border-color: $primary-color;
+  color: $primary-color;
+  min-width: 145px;
+
+ &:hover {
+  background-color: $primary-color;
+  border-color: $primary-color;
+ }
+}
+
+.btn-global {
+  border-radius: 24px;
+  background-color: $accent-color;
+  color: $white;
+
+  &:hover {
+    opacity: 0.85;
+    background-color: $accent-color;
+    color: #ffffff;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.app-logo {
+  img {
+    max-width: 100px;
+  }
+}
