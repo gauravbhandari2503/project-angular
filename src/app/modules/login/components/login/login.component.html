@@ -6,7 +6,7 @@
     <h1 class="mb-5">Login</h1>
     
     <div class="w-100">
-      <form autocomplete="off">
+      <form [formGroup]="loginForm" (ngSubmit)="login()" autocomplete="off">
         <div class="form-group">
           <label class="mb-2" for="email"
             >Email <sup class="text-danger">*</sup></label
@@ -15,6 +15,7 @@
             type="email"
             placeholder="Enter your email"
             class="form-control rounded-3"
+            formControlName="email"
           />
         </div>
         <div class="form-group mt-4">
@@ -27,7 +28,6 @@
             placeholder="Enter your password"
             class="form-control rounded-3"
             formControlName="password"
-            id="password"
           />
         </div>
         <div class="form-group mt-4">
