@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ErrorInputComponent } from './components/error-input/error-input.component';
+import { NgModule } from '@angular/core';
 import { AllErrorMessagesComponent } from './components/all-error-messages/all-error-messages.component';
+import { ErrorInputComponent } from './components/error-input/error-input.component';
 
 
 
@@ -12,6 +12,9 @@ import { AllErrorMessagesComponent } from './components/all-error-messages/all-e
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    ErrorInputComponent
   ]
 })
 export class ErrorModule { }

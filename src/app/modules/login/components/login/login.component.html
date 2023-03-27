@@ -1,7 +1,7 @@
 <div class="container">
   <div class="form-wrapper sm-form-wrapper mh-100vh flex-center">
     <div class="app-logo mb-3">
-      <!-- <img src="../../../../../assets/images/app-logo.png" alt="app logo" /> -->
+      <img src="../../../../../assets/images/app-logo.png" alt="app logo" />
     </div>
     <h1 class="mb-5">Login</h1>
     
@@ -17,6 +17,7 @@
             class="form-control rounded-3"
             formControlName="email"
           />
+          <app-error-input [control]="loginForm.get('email')"></app-error-input>
         </div>
         <div class="form-group mt-4">
           <label class="mb-2" for="password"
@@ -29,6 +30,7 @@
             class="form-control rounded-3"
             formControlName="password"
           />
+          <app-error-input [control]="loginForm.get('password')"></app-error-input>
         </div>
         <div class="form-group mt-4">
           <button

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {
-  UntypedFormControl, UntypedFormGroup
+  UntypedFormControl, UntypedFormGroup, Validators
 } from '@angular/forms';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { ValidationError } from 'src/app/modules/error-module/error/validation-error';
+
 
 @Component({
   selector: 'app-login',
@@ -19,7 +21,7 @@ export class LoginComponent implements OnInit {
   // Validation errors
   validationErrors: ValidationError = {};
 
-  constructor () {
+  constructor (public spinner: NgxSpinnerService) {
     this.loginForm = new UntypedFormGroup({});
   }
 
@@ -29,8 +31,8 @@ export class LoginComponent implements OnInit {
 
   protected setupLoginForm(): void {
     // adding controls
-    this.loginForm.addControl('email', new UntypedFormControl(''));
-    this.loginForm.addControl('password', new UntypedFormControl(''));
+    this.loginForm.addControl('email', new UntypedFormControl('', [Validators.email, Validators.required]));
+    this.loginForm.addControl('password', new UntypedFormControl('', [Validators.required]));
 
   }
 

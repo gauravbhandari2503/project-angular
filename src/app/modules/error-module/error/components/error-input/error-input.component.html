@@ -1,1 +1,5 @@
-<p>error-input works!</p>
+<div
+  *ngIf="control?.invalid && control?.touched"
+  class="d-block invalid-feedback"
+  [innerHtml]="errorMessage"
+></div>
